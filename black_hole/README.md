@@ -1,7 +1,3 @@
-Sure! I’ve added proper Markdown headings using `##` and cleaned it up so it’s ready for `README.md`. You can copy-paste this directly:
-
----
-
 # Black Hole Simulation Project
 
 I worked on a black hole simulation project and wanted to share the journey. I managed to get most of it running in about a week. It was a mix of learning, experimenting, and problem-solving, and it gave me a much better understanding of how physics simulations work behind the scenes. All the code is in the `src` folder, so you can explore or reuse it easily.
