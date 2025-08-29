@@ -1,61 +1,103 @@
-# **black**_**hole**
+Sure! I’ve added proper Markdown headings using `##` and cleaned it up so it’s ready for `README.md`. You can copy-paste this directly:
 
-Black hole simulation project
+---
 
-Here is the black hole raw code, everything will be inside a src bin incase you want to copy the files
+# Black Hole Simulation Project
 
-I'm writing this as I'm beginning this project (hopefully I complete it ;D) here is what I plan to do:
+I worked on a black hole simulation project and wanted to share the journey. I managed to get most of it running in about a week. It was a mix of learning, experimenting, and problem-solving, and it gave me a much better understanding of how physics simulations work behind the scenes. All the code is in the `src` folder, so you can explore or reuse it easily.
 
-1. Ray-tracing : add ray tracing to the gravity simulation to simulate gravitational lensing
+## What I Set Out to Do
 
-2. Accretion disk : simulate accreciate disk using the ray tracing + the halos
+When I started, I had a few goals in mind:
 
-3. Spacetime curvature : demonstrate visually the "trapdoor in spacetime" that is black holes using spacetime grid
+**Ray Tracing** – I wanted to simulate how light bends around a black hole. This part was tricky because getting the visuals to look realistic required a lot of trial and error.
 
-4. [optional] try to make it run realtime ;D
+**Accretion Disk** – I wanted to show the glowing disk around the black hole. Combining it with ray tracing and halo effects took a lot of tweaking to get right.
 
-I hope it works :/
+**Spacetime Curvature** – I tried to visually show how a black hole warps spacetime using a grid. It’s fascinating to see the “trapdoor” effect in action.
 
-Edit: After completion of project -
+**Real-Time Simulation** – I experimented with making the simulation run faster. It pushed my GPU and helped me learn a lot about optimization.
 
-Thank you everyone for checking out the video, if you haven't it explains code in detail: https://www.youtube.com/watch?v=8-B6ryuBkCM
+## Challenges and Learning
 
-## **Building Requirements:**
+The biggest challenges were figuring out the GPU computations for the 3D simulation and debugging the ray tracing. Some days the halos or light bending didn’t look right, and I had to go back and adjust the models.
 
-1. C++ Compiler supporting C++ 17 or newer
+This project taught me how to turn physics concepts into code, how to optimize calculations for speed, and how to match visuals to the underlying simulation. Doing this in one week showed me how much planning and testing goes into even a small simulation project.
 
-2. [Cmake](https://cmake.org/)
+## What I Built
 
-3. [Vcpkg](https://vcpkg.io/en/)
+* A 2D simulation of gravitational lensing.
+* A 3D simulation using GPU computations for faster calculations.
+* A visualization of spacetime curvature and the accretion disk.
 
-4. [Git](https://git-scm.com/)
+The focus wasn’t just on the visuals but also on the physics model and how the simulation calculates everything step by step.
 
-## **Build Instructions:**
+## Takeaways
 
-1. Clone the repository:
-	-  `git clone https://github.com/kavan010/black_hole.git`
-2. CD into the newly cloned directory
-	- `cd ./black_hole` 
-3. Install dependencies with Vcpkg
-	- `vcpkg install`
-4. Get the vcpkg cmake toolchain file path
-	- `vcpkg integrate install`
-	- This will output something like : `CMake projects should use: "-DCMAKE_TOOLCHAIN_FILE=/path/to/vcpkg/scripts/buildsystems/vcpkg.cmake"`
-5. Create a build directory
-	- `mkdir build`
-6. Configure project with CMake
-	-  `cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=/path/to/vcpkg/scripts/buildsystems/vcpkg.cmake`
-	- Use the vcpkg cmake toolchain path from above
-7. Build the project
-	- `cmake --build build`
-8. Run the program
-	- The executables will be located in the build folder
+* Learned ray tracing, GPU-based computation, and physics simulation in practice.
+* Gained hands-on experience with C++17, CMake, and Vcpkg.
+* Learned to translate real-world physics into working, efficient code.
 
-## **How the code works:**
-for 2D: simple, just run 2D_lensing.cpp with the nessesary dependencies installed.
+This project was short but intense and rewarding. By the end, I felt confident tackling more physics-based simulations and understood the challenges of optimizing and debugging complex systems.
 
-for 3D: black_hole.cpp and geodesic.comp work together to run the simuation faster using GPU, essentially it sends over a UBO and geodesic.comp runs heavy calculations using that data.
+## How to Run
 
-should work with nessesary dependencies installed, however I have only run it on windows with my GPU so am not sure!
+**Clone the repository:**
 
-LMK if you would like an in-depth explanation of how the code works aswell :)
+```bash
+git clone https://github.com/haripriyatripathi/Black-Hole-Simulation-using-cpp-.git
+```
+
+**Go into the project folder:**
+
+```bash
+cd Black-Hole-Simulation-using-cpp-
+```
+
+**Install dependencies using Vcpkg:**
+
+```bash
+vcpkg install
+```
+
+**Integrate Vcpkg with CMake:**
+
+```bash
+vcpkg integrate install
+```
+
+This will give you a path to the CMake toolchain, like:
+
+```
+-DCMAKE_TOOLCHAIN_FILE=/path/to/vcpkg/scripts/buildsystems/vcpkg.cmake
+```
+
+**Create a build folder:**
+
+```bash
+mkdir build
+```
+
+**Configure the project with CMake:**
+
+```bash
+cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=/path/to/vcpkg/scripts/buildsystems/vcpkg.cmake
+```
+
+**Build the project:**
+
+```bash
+cmake --build build
+```
+
+**Run the simulation:**
+The executables will be inside the `build` folder.
+
+## How the Code Works
+
+For 2D simulations, run `2D_lensing.cpp`.
+For 3D simulations, `black_hole.cpp` and `geodesic.comp` work together. The CPU sends data to the GPU, which handles the heavy calculations to make the simulation faster.
+
+I mainly tested this on Windows with a GPU, so results may vary on other systems. If anyone is curious, I can explain more about the models, optimizations, and how the GPU calculations work in detail, dm me: haripriyatripathix@gmail.com :)
+
+
