@@ -30,7 +30,7 @@ bool Gravity = false;
 
 struct Camera {
     // Center the camera orbit on the black hole at (0, 0, 0)
-    vec3 target = vec3(0.0f, 0.0f, 0.0f); // Always look at the black hole center
+    vec3 target = vec3(0.0f, 0.0f, 0.0f); //Always look at the black hole center
     float radius = 6.34194e10f;
     float minRadius = 1e10f, maxRadius = 1e12f;
 
