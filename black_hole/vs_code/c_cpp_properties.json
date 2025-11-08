@@ -5,7 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "C:/msys64/mingw64/include",
-                "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.8/include"
+                "C:/Program Files/NVDIA GPU Computing Toolkit/CUDA/v12.8/include"
             ],
             "defines": [],
             "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
