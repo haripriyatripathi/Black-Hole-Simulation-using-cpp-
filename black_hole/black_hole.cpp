@@ -46,7 +46,7 @@ struct Camera {
     bool moving = false; // For compute shader optimization
     double lastX = 0.0, lastY = 0.0;
 
-    // Calculate camera position in world space
+    // Calculate camera position in world space.
     vec3 position() const {
         float clampedElevation = glm::clamp(elevation, 0.01f, float(M_PI) - 0.01f);
         // Orbit around (0,0,0) always
