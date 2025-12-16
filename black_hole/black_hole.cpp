@@ -6,7 +6,7 @@
 #include <vector>
 #include <iostream>
 #define _USE_MATH_DEFINES
-#include <cmath
+#include <cmath>
 #include <sstream>
 #include <iomanip>
 #include <cstring>
